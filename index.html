@@ -1,0 +1,107 @@
+  <!DOCTYPE html>
+<hmtl lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            I LOVE U 
+        </title>
+        <style>
+        img{
+              transition: opacity 0.5s ease;
+        }
+        .buntton1{
+             height: 100px;
+            width: 100px;
+            position: absolute;
+            left: 800px;
+            top: 650px;
+            background-color: black;
+            color: aliceblue;
+            font-size: larger;
+            font-style: italic;
+            border: none;
+            border-radius:500px ;
+
+        }
+        .buntton2{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            left: 1000px;
+            top: 650px;
+            background-color: black;
+            color: aliceblue;
+            font-size: larger;
+            font-style: italic;
+            border: none;
+            border-radius:500px ;
+
+        }
+        </style>
+    </head>
+    <img height="500" width="600" id="foto" src="fotos juntos.jfif" >
+    <body>
+        <h1>
+            I Love You
+        </h1>
+        <button id="b1" class="buntton1" onclick="Ant()">Ant</button>
+        <button id="b2" class="buntton2" onclick="Prx()">Prx</button> 
+        <script>
+            let imagens = ["fotos juntos.jfif", "juntos2.jpeg","ela.jpeg","foto17.jpeg","foto18.jpeg","foto3.jpeg","foto4.jpeg","foto5.jpeg","foto6.jpeg","foto7.jpeg","foto8.jpeg","foto9.jpeg","foto10.jpeg","foto11.jpeg","foto12.jpeg","foto13.jpeg","foto14.jpeg","foto15.jpeg","foto16.jpeg"];
+            let indice=0;
+            function trocarImagem() {
+             let imagem = document.getElementById("foto");
+             imagem.style.opacity = 0;
+             setTimeout(function() {
+             imagem.src = imagens[indice];
+             imagem.style.opacity = 1; 
+            }, 500);}
+            function Prx(){
+                indice++;
+                if(indice>=imagens.length){
+                    indice=0
+                }
+                trocarImagem();
+            }
+            function Ant(){
+                indice--;
+                if(indice<0){
+                indice=imagens.length-1;
+                }
+                 trocarImagem();
+            }
+        </script>
+    </body>
+    <style>
+        body{
+            color: rgb(255, 255, 255);
+            margin: 0;
+            height: 100vh;
+            background: 
+            radial-gradient(circle, 
+             rgba(0,0,0,0) 50%, 
+             rgba(0,0,0,0.6) 100%
+              ) rgb(51, 3, 3);
+        }
+        img{
+            position: absolute;
+            left: 650px;
+            top: 100px;
+            border-radius:20px;             
+            
+            
+        }
+        button{
+            
+
+        }
+        h1{
+            position: absolute;
+           left: 880px;
+           top: 590px;
+           
+        
+        }
+    </style>
+      
+
